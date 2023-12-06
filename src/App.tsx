@@ -81,7 +81,13 @@ function App(): JSX.Element {
 					 species: 'Tiny Cat',
 					 favFoods: ['milk'],
 					 birthYear: 2021,
-				 }
+				 },
+				 {
+					name: "Captain Catface",
+					species: "Sea Cattain",
+					favFoods: ["fish, rum"],
+					birthYear: 2016,
+				  }
 		 ]
 	);
 
