@@ -85,14 +85,17 @@ function App(): JSX.Element {
 		 ]
 	);
 
+	const catCount = cats.length;
+
 	return (
 		<>
 			<Navbar />
-			<Header />
+			<Header noOfCats = {catCount}/>
 
 			<main>
 				<div className='cards__wrapper'>
-					{cats.map((cat: Cat, index:number) => <CatCard 
+					{cats.map((cat: Cat, index:number) => 
+					<CatCard 
 						name = {cat.name} 
 						species = {cat.species}
 						favFoods = {cat.favFoods}
