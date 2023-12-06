@@ -92,11 +92,12 @@ function App(): JSX.Element {
 
 			<main>
 				<div className='cards__wrapper'>
-					{cats.map((cat: Cat) => <CatCard 
+					{cats.map((cat: Cat, index:number) => <CatCard 
 						name = {cat.name} 
 						species = {cat.species}
 						favFoods = {cat.favFoods}
 						birthYear = {cat.birthYear}
+						catIndex={index}
 					/>)}
 					</div>
 			</main>
