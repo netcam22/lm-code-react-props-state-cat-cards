@@ -1,5 +1,11 @@
+interface CatCardProps {
+   name: string;
+   species: string;
+   favFoods: Array<string>;
+   birthYear: number;
+}
 
-const CatCard: React.FC = () => 
+const CatCard: React.FC<CatCardProps> = (props) => 
 
     <div className="card">
     <h3 className="card__text card__header">Mr Gwumpy</h3>
