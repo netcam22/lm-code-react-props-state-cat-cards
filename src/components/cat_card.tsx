@@ -116,9 +116,10 @@ interface CatCardProps {
    favFoods: Array<string>;
    birthYear: number;
    catIndex: number;
+   petType: string;
 }
 
-const CatCard: React.FC<CatCardProps> = ({name, species, favFoods, birthYear, catIndex}) => {
+const CatCard: React.FC<CatCardProps> = ({petType, name, species, favFoods, birthYear, catIndex}) => {
     /*
     console.log(
 		'CatCard receiving props from App?! Come in App?! 😸 Props received are: ',
@@ -128,6 +129,7 @@ const CatCard: React.FC<CatCardProps> = ({name, species, favFoods, birthYear, ca
     return <>
         <div className="card">
         <h3 className="card__text card__header">{name}</h3>
+		<h2 className='header__title'>Our {petType}s:</h2>
         {catIndex < images.length && (
         <CatImage 
 			image={images[catIndex].image}

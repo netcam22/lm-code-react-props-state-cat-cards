@@ -18,13 +18,14 @@ import { PetContainer } from './components/custom-fetch/pet-container';
 	return (
 		<>
 			<Navbar />
-			<Header noOfCats = {catCount}/>
+			<Header noOfCats = {catCount} noOfDogs = {dogCount}/>
 
 			<main>
 				
 				<div className='cards__wrapper'>
 					{cats.map((cat: Cat, index:number) => 
 					<CatCard 
+						petType = "Cat"
 						name = {cat.name} 
 						species = {cat.species}
 						favFoods = {cat.favFoods}
