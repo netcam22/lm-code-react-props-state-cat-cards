@@ -20,7 +20,7 @@ export const PetContainer: React.FC<APICallProps> = ({petType, endPoint, names})
     return (<>
 		{petData.isFetching ? 
 		<h2 className='header__title'>Fetching...</h2> 
-		: <h2 className='header__title'>Some more {petType}s:</h2>}
+		: <h2 className='header__title'>Some {petType}s and their breeds:</h2>}
         <div className='cards__wrapper'>
 		{petData.data &&
         petData.data.map((pet, index) => {

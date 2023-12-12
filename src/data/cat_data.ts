@@ -74,13 +74,7 @@ const catStaticData =
 					 species: 'Tiny Cat',
 					 favFoods: ['milk'],
 					 birthYear: 2021,
-				 },
-				 {
-					name: "Captain Catface",
-					species: "Sea Cattain",
-					favFoods: ["fish, rum"],
-					birthYear: 2016,
-				  }
+				 }
 		 ];
 
 export const catData = catStaticData.map((cat: Cat) => {

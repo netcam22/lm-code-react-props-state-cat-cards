@@ -24,8 +24,7 @@ import { PetContainer } from './components/custom-fetch/pet-container';
 				
 				<div className='cards__wrapper'>
 					{cats.map((cat: Cat, index:number) => 
-					<CatCard 
-						petType = "Cat"
+					<CatCard
 						name = {cat.name} 
 						species = {cat.species}
 						favFoods = {cat.favFoods}
