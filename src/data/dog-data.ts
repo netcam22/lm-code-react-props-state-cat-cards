@@ -1,27 +1,2 @@
-import Dog from './dog';
-import {v4 as uuidv4} from "uuid";
-
-const dogStaticData: Array<Dog> = [
-	{
-		name: 'Floofus',
-		species: 'Puppy',
-		favFoods: ['marshmallows'],
-		birthYear: 2020,
-	},
-	{
-		name: 'Doofus',
-		species: 'Doggo',
-		favFoods: ['porridge, dog food'],
-		birthYear: 2010,
-	},
-	{
-		name: 'Goofus',
-		species: 'Dog',
-		favFoods: ['bouncy balls'],
-		birthYear: 2015,
-	},
-];
-
-export const dogData = dogStaticData.map((dog: Dog) => {
-	return {...dog, id: uuidv4()};
-});
+export const dogEndPoint = "https://api.thedogapi.com/v1/images/search?limit=6&has_breeds=1&api_key=live_SGCOCUSRlMPtuUyfbvJYyO3b54YDIH50fQWGPwY8yySWMudUobwONZkbMBiWUzBZ";
+export const dogNames = ["Milo", "Charlie", "Teddy", "Luna", "Coco", "Bella"];

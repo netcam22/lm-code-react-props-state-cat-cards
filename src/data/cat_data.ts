@@ -86,3 +86,6 @@ const catStaticData =
 export const catData = catStaticData.map((cat: Cat) => {
     return {...cat, id: uuidv4()};
 });
+
+export const catEndPoint = "https://api.thecatapi.com/v1/images/search?limit=6&has_breeds=1&api_key=live_7z9YrvTvX0vWxVWX3X4YlwaaLlPMavr2XgxFb9TuucYnRVzsORry3ScJo6W33Uft";
+export const catNames = ["Oscar", "Felix", "Freddie", "Cleo", "Roxy", "Rosie"];

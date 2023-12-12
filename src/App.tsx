@@ -4,15 +4,16 @@ import Header from './components/header';
 import Footer from './components/footer';
 import { useState } from 'react';
 import Cat from './data/cat';
-import { catData } from './data/cat_data';
+import { catData, catEndPoint, catNames } from './data/cat_data';
 import CatCard from './components/cat_card';
-import Dog from './data/dog';
-import {dogData} from './data/dog-data';
+import {dogEndPoint, dogNames} from './data/dog-data';
+import { PetContainer } from './components/custom-fetch/pet-container';
 
 	function App(): JSX.Element {
 
 	const [cats, setCats] = useState<Array<Cat>>(catData);
-	const catCount = cats.length;
+	const catCount = cats.length + catNames.length;
+	const dogCount = dogNames.length;
 
 	return (
 		<>
@@ -20,6 +21,7 @@ import {dogData} from './data/dog-data';
 			<Header noOfCats = {catCount}/>
 
 			<main>
+				
 				<div className='cards__wrapper'>
 					{cats.map((cat: Cat, index:number) => 
 					<CatCard 
@@ -31,6 +33,10 @@ import {dogData} from './data/dog-data';
 						key = {cat.id}
 					/>)}
 					</div>
+
+					<PetContainer petType = "Dog" endPoint = {dogEndPoint} names = {dogNames}/>
+					<PetContainer petType = "Cat" endPoint = {catEndPoint} names = {catNames}/>
+
 			</main>
 
 			<Footer />
