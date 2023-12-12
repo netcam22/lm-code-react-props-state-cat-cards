@@ -83,6 +83,6 @@ const catStaticData =
 				  }
 		 ];
 
-export const catData = catStaticData.map((thisCat: Cat) => {
-    return {...thisCat, id: uuidv4()};
+export const catData = catStaticData.map((cat: Cat) => {
+    return {...cat, id: uuidv4()};
 });

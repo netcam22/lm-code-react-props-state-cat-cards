@@ -1,6 +1,7 @@
 import Dog from './dog';
+import {v4 as uuidv4} from "uuid";
 
-const dogs: Array<Dog> = [
+const dogStaticData: Array<Dog> = [
 	{
 		name: 'Floofus',
 		species: 'Puppy',
@@ -20,3 +21,7 @@ const dogs: Array<Dog> = [
 		birthYear: 2015,
 	},
 ];
+
+const dogData = dogStaticData.map((dog: Dog) => {
+	return {...dog, id: uuidv4()};
+});
