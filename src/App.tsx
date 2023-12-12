@@ -6,6 +6,8 @@ import { useState } from 'react';
 import Cat from './data/cat';
 import { catData } from './data/cat_data';
 import CatCard from './components/cat_card';
+import Dog from './data/dog';
+import {dogData} from './data/dog-data';
 
 	function App(): JSX.Element {
 

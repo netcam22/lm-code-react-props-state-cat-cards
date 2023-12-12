@@ -22,6 +22,6 @@ const dogStaticData: Array<Dog> = [
 	},
 ];
 
-const dogData = dogStaticData.map((dog: Dog) => {
+export const dogData = dogStaticData.map((dog: Dog) => {
 	return {...dog, id: uuidv4()};
 });
