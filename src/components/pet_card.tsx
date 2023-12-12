@@ -39,7 +39,7 @@ const PetCard: React.FC<PetCardProps> = (props) => {
         <p className="card__text">Species: {props.species}</p>
         <p className="card__text">{favFoodsTitle}: {favFoods}</p>
         <p className="card__text">Birth Year: {props.birthYear}</p>
-        </div>;
+        </div>
     </>
     }
 
