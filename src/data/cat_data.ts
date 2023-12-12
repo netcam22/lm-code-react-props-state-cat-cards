@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import Cat from './pet';
+import {Pet, PetInfo} from './pet';
 import cat1 from '../assets/images/cat1.jpg';
 import cat2 from '../assets/images/cat2.jpg';
 import cat3 from '../assets/images/cat3.jpg';
@@ -13,7 +13,7 @@ import cat10 from '../assets/images/cat10.jpg';
 import cat11 from '../assets/images/cat11.jpg';
 import cat12 from '../assets/images/cat12.jpg';
 
-const catStaticData = 
+const cats: Array<Pet> = 
 		[
 			{
 					 name: 'Little Miss Purrfect',
@@ -89,7 +89,7 @@ const catStaticData =
 				 }
 		 ];
 
-export const images = [
+export const catImages = [
 	{
 		image: cat1,
 		altText: 'Describe this cat!',
@@ -188,8 +188,15 @@ export const images = [
 	}
 ];
 
-export const catData = catStaticData.map((cat: Cat) => {
-    return {...cat, id: uuidv4()};
+export const catData = cats.map((cat: Pet, index: number): PetInfo => {
+    return {...cat,
+		id: uuidv4(),
+		image: catImages[index].image,
+		altText: catImages[index].altText,
+		licenceType: catImages[index].licenceType,
+		licenceUrl: catImages[index].licenceUrl,
+		attributionName: catImages[index].attributionName,
+		attributionUrl: catImages[index].attributionUrl};
 });
 
 export const catEndPoint = "https://api.thecatapi.com/v1/images/search?limit=6&has_breeds=1&api_key=live_7z9YrvTvX0vWxVWX3X4YlwaaLlPMavr2XgxFb9TuucYnRVzsORry3ScJo6W33Uft";
