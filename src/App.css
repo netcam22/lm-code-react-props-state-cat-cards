@@ -33,6 +33,7 @@ body {
 .header__title {
 	color: var(--navy);
 	font-family: 'Cattino';
+	text-align: center;
 }
 
 .header__welcome {
