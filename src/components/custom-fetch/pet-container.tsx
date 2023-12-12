@@ -24,9 +24,9 @@ export const PetContainer: React.FC<APICallProps> = ({petType, endPoint, names})
         <div className='cards__wrapper'>
 		{petData.data &&
         petData.data.map((pet, index) => {
-        return <div className="card">
+        return <div key={index} className="card">
             <h3 className="card__text card__header">{names[index]}</h3>
-            <PetDisplay key={pet.id} id={pet.id} url = {pet.url} breeds = {pet.breeds}/>
+            <PetDisplay key={`${pet.id}${index}`} id={`${pet.id}${index}`} url = {pet.url} breeds = {pet.breeds}/>
             </div>
         })} 
         </div>

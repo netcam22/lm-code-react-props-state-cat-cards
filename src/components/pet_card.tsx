@@ -1,4 +1,5 @@
 import PetImage from './pet_image';
+import PetFood from './pet_food';
 
 interface PetCardProps {
     name: string;
@@ -27,6 +28,7 @@ const PetCard: React.FC<PetCardProps> = (props) => {
         <h3 className="card__text card__header">{props.name}</h3>
         {props.petIndex < props.petCount && (
         <PetImage 
+            key = {props.petIndex.toString()}
 			image={props.image}
 			altText={props.altText}
 			licenceType={props.licenceType}
@@ -37,6 +39,8 @@ const PetCard: React.FC<PetCardProps> = (props) => {
         )}
         <p className="card__text">Species: {props.species}</p>
         <p className="card__text">Favourite Food(s): {props.favFoods}</p>
+        {props.favFoods.map((food: string, index: number) => 
+        <PetFood key = {index.toString()} foodItem = {food}/>)};
         <p className="card__text">Birth Year: {props.birthYear}</p>
         </div>;
     </>
