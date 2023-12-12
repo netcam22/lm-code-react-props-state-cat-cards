@@ -5,7 +5,7 @@ import Footer from './components/footer';
 import { useState } from 'react';
 import Cat from './data/cat';
 import { catData, catEndPoint, catNames } from './data/cat_data';
-import CatCard from './components/cat_card';
+import PetCard from './components/pet_card';
 import {dogEndPoint, dogNames} from './data/dog-data';
 import { PetContainer } from './components/custom-fetch/pet-container';
 
@@ -24,12 +24,12 @@ import { PetContainer } from './components/custom-fetch/pet-container';
 				
 				<div className='cards__wrapper'>
 					{cats.map((cat: Cat, index:number) => 
-					<CatCard
+					<PetCard
 						name = {cat.name} 
 						species = {cat.species}
 						favFoods = {cat.favFoods}
 						birthYear = {cat.birthYear}
-						catIndex={index}
+						petIndex={index}
 						key = {cat.id}
 					/>)}
 					</div>

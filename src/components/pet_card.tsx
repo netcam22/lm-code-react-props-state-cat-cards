@@ -1,15 +1,15 @@
 import {images} from '../data/cat_data';
 import PetImage from './pet_image';
 
-interface CatCardProps {
+interface PetCardProps {
    name: string;
    species: string;
    favFoods: Array<string>;
    birthYear: number;
-   catIndex: number;
+   petIndex: number;
 }
 
-const CatCard: React.FC<CatCardProps> = ({name, species, favFoods, birthYear, catIndex}) => {
+const PetCard: React.FC<PetCardProps> = ({name, species, favFoods, birthYear, petIndex}) => {
     /*
     console.log(
 		'CatCard receiving props from App?! Come in App?! 😸 Props received are: ',
@@ -19,14 +19,14 @@ const CatCard: React.FC<CatCardProps> = ({name, species, favFoods, birthYear, ca
     return <>
         <div className="card">
         <h3 className="card__text card__header">{name}</h3>
-        {catIndex < images.length && (
+        {petIndex < images.length && (
         <PetImage 
-			image={images[catIndex].image}
-			altText={images[catIndex].altText}
-			licenceType={images[catIndex].licenceType}
-			licenceUrl={images[catIndex].licenceUrl}
-			attributionName={images[catIndex].attributionName}
-			attributionUrl={images[catIndex].attributionUrl}
+			image={images[petIndex].image}
+			altText={images[petIndex].altText}
+			licenceType={images[petIndex].licenceType}
+			licenceUrl={images[petIndex].licenceUrl}
+			attributionName={images[petIndex].attributionName}
+			attributionUrl={images[petIndex].attributionUrl}
         />
         )}
         <p className="card__text">Species: {species}</p>
@@ -36,4 +36,4 @@ const CatCard: React.FC<CatCardProps> = ({name, species, favFoods, birthYear, ca
     </>
     }
 
-export default CatCard;
+export default PetCard;
