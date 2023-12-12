@@ -1,5 +1,5 @@
 import {images} from '../data/cat_data';
-import CatImage from './cat_image';
+import PetImage from './pet_image';
 
 interface CatCardProps {
    name: string;
@@ -20,7 +20,7 @@ const CatCard: React.FC<CatCardProps> = ({name, species, favFoods, birthYear, ca
         <div className="card">
         <h3 className="card__text card__header">{name}</h3>
         {catIndex < images.length && (
-        <CatImage 
+        <PetImage 
 			image={images[catIndex].image}
 			altText={images[catIndex].altText}
 			licenceType={images[catIndex].licenceType}
