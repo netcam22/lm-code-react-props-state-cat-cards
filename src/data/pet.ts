@@ -1,4 +1,4 @@
-export default interface Cat {
+export default interface Pet {
     name: string;
     species: string;
     favFoods: Array<string>;
